@@ -11,8 +11,9 @@ const hero = {
 
 function rest(person) {
   if (person.health < 10) {
-    return (person.health = 10);
+    person.health = 10;
   }
+  return person;
 }
 
 function pickUpItem() {}
