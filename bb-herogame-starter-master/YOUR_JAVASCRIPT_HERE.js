@@ -9,8 +9,14 @@ const hero = {
   weapon: { type: "Whimsical", damage: 2 }
 };
 
-function rest() {}
+function rest(person) {
+  if (person.health < 10) {
+    return (person.health = 10);
+  }
+}
 
 function pickUpItem() {}
 
 function equipWeapon() {}
+
+rest(hero.health);
