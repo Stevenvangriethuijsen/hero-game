@@ -12,6 +12,8 @@ const hero = {
 function rest(person) {
   if (person.health < 10) {
     person.health = 10;
+  } else if (person.health === 10) {
+    window.alert(`You are already at full HP`);
   }
   return person;
 }
