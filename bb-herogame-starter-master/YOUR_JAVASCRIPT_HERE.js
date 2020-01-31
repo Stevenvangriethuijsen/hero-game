@@ -1,4 +1,4 @@
 // Write your JS here
 const myHero = {};
 
-const hero = {};
+const hero = { name: "Zorblar" };
