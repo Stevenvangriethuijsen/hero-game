@@ -8,3 +8,9 @@ const hero = {
   health: 10,
   weapon: { type: "Whimsical", damage: 2 }
 };
+
+function rest() {}
+
+function pickUpItem() {}
+
+function equipWeapon() {}
