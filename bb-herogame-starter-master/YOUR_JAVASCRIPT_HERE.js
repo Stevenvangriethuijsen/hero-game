@@ -18,6 +18,14 @@ function rest(person) {
   return person;
 }
 
-function pickUpItem() {}
+function pickUpItem(person, weapon) {
+  person.inventory.push(weapon);
+}
 
-function equipWeapon() {}
+function equipWeapon(person) {
+  if (person.inventory.length === 0) {
+    return;
+  } else {
+    person.weapon = person.inventory[0];
+  }
+}
