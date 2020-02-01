@@ -29,3 +29,14 @@ function equipWeapon(person) {
     person.weapon = person.inventory[0];
   }
 }
+
+function displayStats() {
+  document.getElementById("name").innerHTML = "Name: Keeblar";
+  document.getElementById("health").innerHTML = "Health is 10 out of 10";
+  document.getElementById("weaponType").innerHTML =
+    "Weapon type: Grooble Blaster";
+  document.getElementById("weaponDamage").innerHTML = "Weapon Damgage: 4";
+  return;
+}
+
+displayStats();

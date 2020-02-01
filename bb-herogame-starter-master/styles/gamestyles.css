@@ -21,23 +21,14 @@
 .imageContainer {
   display: flex;
   justify-content: center;
-  border: 5px solid rgb(216, 137, 19);
   margin: 5px;
-  width: 30vw;
-  background-color: white;
+  width: 25vw;
+  background-color: rgb(98, 143, 151);
 }
 
 img {
   overflow: hidden;
   height: 100%;
-}
-
-.statsWindow {
-  margin: 5px;
-  border: 5px solid black;
-  width: 100%;
-  height: 20vh;
-  background-color: rgb(98, 143, 151);
 }
 
 .textWindow {
@@ -46,4 +37,22 @@ img {
   width: 100%;
   height: 30vh;
   background-color: rgb(98, 143, 151);
+}
+
+.statsAndInventory {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  border: 5px solid black;
+  width: 100%;
+  height: 20vh;
+  background-color: rgb(98, 143, 151);
+}
+
+.stats,
+.inventory {
+  text-align: center;
+  margin: 3px;
+  border: 2px solid black;
+  width: 40vw;
 }

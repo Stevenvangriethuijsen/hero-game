@@ -33,8 +33,18 @@
         <div class="textOutput"></div>
         <div class="textInput"></div>
       </div>
-
-      <div class="statsWindow"></div>
+      <div class="statsAndInventory">
+        <div class="stats">
+          <p id="name">Name: unknown</p>
+          <p id="health">Health: unkown</p>
+          <p id="weaponType">Weapon type: unknown</p>
+          <p id="weaponDamage">Weapon damage: 2</p>
+        </div>
+        <div class="inventory">
+          <p>Inventory:</p>
+          <p id="itemInInventory">...</p>
+        </div>
+      </div>
     </div>
     <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
     <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
