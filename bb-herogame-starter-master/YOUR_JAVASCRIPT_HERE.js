@@ -21,13 +21,17 @@ function rest(person) {
 
 function pickUpItem(person, weapon) {
   person.inventory.push(weapon);
+  displayInventory();
 }
 
 function equipWeapon(person) {
   if (person.inventory.length === 0) {
     return;
   } else {
+    const tempWeapon = person.weapon;
     person.weapon = person.inventory[0];
+    person.inventory.shift();
+    person.inventory.push(tempWeapon);
     displayInventory();
     displayStats();
   }
@@ -63,7 +67,8 @@ function displayInventory() {
     for (let i = 0; i < hero.inventory.length; i++) {
       document.getElementById(
         "itemInInventory"
-      ).innerHTML = `${hero.inventory[i].weapon}`;
+      ).innerHTML = `${hero.inventory[i].type}`;
+      console.log(hero.inventory[i]);
     }
   }
 }
@@ -78,6 +83,6 @@ const testWeapon2 = { weapon: { type: "Grooble Blaster", damage: 6 } };
 //
 const audio = new Audio("Epic-battle-music-grzegorz-majcherczyk-heroica.mp3");
 
-audio.play();
 displayStats();
 displayInventory();
+audio.play();
