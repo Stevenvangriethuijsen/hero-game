@@ -40,8 +40,18 @@ function displayStats() {
   ).innerHTML = `Weapon type : ${hero.weapon.type}`;
   document.getElementById(
     "weaponDamage"
-  ).innerHTML = `Weapon Damgage : ${hero.weapon.damage}`;
+  ).innerHTML = `Weapon Damage : ${hero.weapon.damage}`;
   return;
 }
 
+function newName() {
+  const name = document.getElementById("myName").value;
+  document.getElementById("welcomeName").innerHTML = `Welcome : ${name}`;
+  if (hero.name !== name) {
+    hero.name = name;
+    displayStats();
+  }
+}
+
 displayStats();
+console.log(hero.name);
