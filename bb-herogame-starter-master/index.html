@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Mocha Tests</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="lib/mocha.css" rel="stylesheet" />
     <link href="styles/gamestyles.css" rel="stylesheet" type="text/css" />
   </head>
@@ -11,21 +11,30 @@
     <!-- 👍 YOUR HTML HERE 👍 -->
     <div class="testsection">
       <div class="images">
-        <img src="Goldshire_TCG.jpg" id="inn" onclick="rest(hero)" />
-        <img
-          src="Dagger.jpg"
-          id="dagger"
-          onclick="pickUpItem(hero, {type: 'dagger', damage: 2})"
-        />
-        <img
-          src="manliest-of-man-bags.jpeg"
-          id="bag"
-          onclick="equipWeapon(hero)"
-        />
+        <div class="imageContainer">
+          <img src="Goldshire_TCG.jpg" id="inn" onclick="rest(hero)" />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="Dagger.jpg"
+            id="dagger"
+            onclick="pickUpItem(hero, {type: 'dagger', damage: 2})"
+          />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="manliest-of-man-bags.jpeg"
+            id="bag"
+            onclick="equipWeapon(hero)"
+          />
+        </div>
       </div>
-      <div class="testbutton">
-        <button id="clickme">Click me: 0</button>
+      <div class="textWindow">
+        <div class="textOutput"></div>
+        <div class="textInput"></div>
       </div>
+
+      <div class="statsWindow"></div>
     </div>
     <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
     <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
