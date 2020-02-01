@@ -31,11 +31,16 @@ function equipWeapon(person) {
 }
 
 function displayStats() {
-  document.getElementById("name").innerHTML = "Name: Keeblar";
-  document.getElementById("health").innerHTML = "Health is 10 out of 10";
-  document.getElementById("weaponType").innerHTML =
-    "Weapon type: Grooble Blaster";
-  document.getElementById("weaponDamage").innerHTML = "Weapon Damgage: 4";
+  document.getElementById("name").innerHTML = `Name : ${hero.name}`;
+  document.getElementById(
+    "health"
+  ).innerHTML = `Health : ${hero.health} out of 10`;
+  document.getElementById(
+    "weaponType"
+  ).innerHTML = `Weapon type : ${hero.weapon.type}`;
+  document.getElementById(
+    "weaponDamage"
+  ).innerHTML = `Weapon Damgage : ${hero.weapon.damage}`;
   return;
 }
 
