@@ -14,6 +14,7 @@ function rest(person) {
     alert("You are at full health.");
   } else {
     person.health = 10;
+    displayStats();
   }
   return person;
 }
@@ -27,6 +28,8 @@ function equipWeapon(person) {
     return;
   } else {
     person.weapon = person.inventory[0];
+    displayInventory();
+    displayStats();
   }
 }
 
@@ -53,5 +56,28 @@ function newName() {
   }
 }
 
+function displayInventory() {
+  if (hero.inventory.length === 0) {
+    document.getElementById("itemInInventory").innerHTML = `Your bag is empty.`;
+  } else {
+    for (let i = 0; i < hero.inventory.length; i++) {
+      document.getElementById(
+        "itemInInventory"
+      ).innerHTML = `${hero.inventory[i].weapon}`;
+    }
+  }
+}
+// test heroes and weapons
+const testHero = {
+  name: "Kreeble Darktongue",
+  health: 8,
+  weapon: { type: "Grooble Blaster", damage: 6 }
+};
+const testWeapon = { weapon: { type: "Kublee Cutter", damage: 72 } };
+const testWeapon2 = { weapon: { type: "Grooble Blaster", damage: 6 } };
+//
+const audio = new Audio("Epic-battle-music-grzegorz-majcherczyk-heroica.mp3");
+
+audio.play();
 displayStats();
-console.log(hero.name);
+displayInventory();
