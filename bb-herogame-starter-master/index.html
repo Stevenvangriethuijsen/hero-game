@@ -1,14 +1,22 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Mocha Tests</title>
+
     <link href="lib/mocha.css" rel="stylesheet" />
+    <link href="/styles/gamestyles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- 👍 YOUR HTML HERE 👍 -->
-
-    <img src="https://tinyurl.com/ty6gwj7" id="inn" />
-
+    <div class="testsection">
+      <div class="images">
+        <img src="Goldshire_TCG.jpg" id="inn" onclick="rest(hero)" />
+      </div>
+      <div class="testbutton">
+        <button id="clickme">Click me: 0</button>
+      </div>
+    </div>
     <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
     <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
 
