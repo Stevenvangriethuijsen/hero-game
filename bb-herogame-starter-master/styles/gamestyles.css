@@ -9,7 +9,13 @@
 }
 .images {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: 5px;
+}
+
+img {
   margin: 5px;
 }
 .testbutton {
